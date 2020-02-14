@@ -31,8 +31,7 @@ let quotes = [
 source: "Friedrich Nietzsche"
 }
 ];
-
-
+console.log(quotes);
 /***
  * `getRandomQuote` function
 ***/
