@@ -88,7 +88,7 @@ return document.body.style.backgroundColor = rgb; // shortest way of direct refe
 
 let rbgColor = getRandomColor(); //leavin this console command uncomented so it loads initial RGB (otherwise would be white background)
 // console.log(rbgColor);
-addEventListener("click", getRandomColor, false); //Used fagment of "document.getElementById('load-quote').addEventListener("click", printQuote, false);" 
+document.getElementById('load-quote').addEventListener("click", getRandomColor, false); //Used fagment of "document.getElementById('load-quote').addEventListener("click", printQuote, false);" 
 
 // Added Interval of 5 sec with setInterval command
 // https://www.w3schools.com/jsref/met_win_setinterval.asp
