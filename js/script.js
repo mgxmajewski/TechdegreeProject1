@@ -75,6 +75,20 @@ function printQuote () {
 
 console.log(printQuote());
 
+//Creating random color Generator, idea from https://stackoverflow.com/questions/1484506/random-color-generator
+
+function getRandomColor() {
+  var hexString = '0123456789ABCDEF';
+  var RandomColor = '#';
+  for (var i = 0; i < hexString.length; i++) {
+    RandomColor += hexString[Math.floor(Math.random() * hexString.length)];
+  }
+  return RandomColor;
+}
+console.log(getRandomColor());
+document.getElementById('background-color').style.background = getRandomColor();
+
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
