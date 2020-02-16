@@ -52,21 +52,15 @@ function printQuote () {
   let QuoteString = "";
   if (RandomQuote.quote && RandomQuote.source){
     QuoteString += '<p class="quote">' + RandomQuote.quote + '</p>' + 
-                    '<p class="source">' + RandomQuote.source + '</p>';
+                    '<p class="source">' + RandomQuote.source;
   }
-  if (RandomQuote.quote && RandomQuote.source && RandomQuote.citation){
-    QuoteString += '<p class="quote">' + RandomQuote.quote + '</p>' + 
-                    '<p class="source">' + RandomQuote.source + 
-                      '<span class="citation"> ' + RandomQuote.citation + '</span>' 
-                  + '</p>';
+  if (RandomQuote.citation){
+    QuoteString += '<span class="citation"> ' + RandomQuote.citation + '</span>';
   }
-  if (RandomQuote.quote && RandomQuote.source && RandomQuote.citation && RandomQuote.year){
-    QuoteString += '<p class="quote">' + RandomQuote.quote + '</p>' + 
-                    '<p class="source">' + RandomQuote.source + 
-                      '<span class="citation"> ' + RandomQuote.citation + '</span>' +
-                      '<span class="year">' + RandomQuote.year + '</span>'
-                  + '</p>';
+  if (RandomQuote.year){
+    QuoteString += '<span class="year">' + RandomQuote.year + '</span>';
   }
+  QuoteString += '</p>';
   return QuoteString;
 }
 
