@@ -31,12 +31,17 @@ let quotes = [
 source: "Friedrich Nietzsche"
 }
 ];
-console.log(quotes);
+console.log(quotes[2]);
 /***
  * `getRandomQuote` function
 ***/
-
-
+function getRandomQuote(array) {
+  let randomNumber = Math.floor(Math.random() * array.length);
+  return randomNumber;
+}
+let random = getRandomQuote(quotes);
+console.log(random);
+console.log(quotes[random]);
 
 /***
  * `printQuote` function
