@@ -37,11 +37,11 @@ console.log(quotes[2]);
 ***/
 function getRandomQuote(array) {
   let randomNumber = Math.floor(Math.random() * array.length);
-  return randomNumber;
+  return array[randomNumber];
 }
-let random = getRandomQuote(quotes);
-console.log(random);
-console.log(quotes[random]);
+
+console.log(getRandomQuote(quotes));
+
 
 /***
  * `printQuote` function
