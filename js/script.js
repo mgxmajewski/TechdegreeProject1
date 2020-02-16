@@ -90,6 +90,15 @@ let rbgColor = getRandomColor(); //leavin this console command uncomented so it 
 // console.log(rbgColor);
 addEventListener("click", getRandomColor, false); //Used fagment of "document.getElementById('load-quote').addEventListener("click", printQuote, false);" 
 
+// Added Interval of 5 sec with setInterval command
+// https://www.w3schools.com/jsref/met_win_setinterval.asp
+
+
+setInterval(function(){ 
+  printQuote (); 
+  getRandomColor(); 
+}, 5000);
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
