@@ -42,13 +42,40 @@ function getRandomQuote(array) {
 
 console.log(getRandomQuote(quotes));
 
-
 /***
  * `printQuote` function
 ***/
 
 
+function printQuote () {
+  let RandomQuote = getRandomQuote(quotes);
+  let QuoteString = "";
+  if (RandomQuote.quote && RandomQuote.source){
+    QuoteString += '<p class="quote">' + RandomQuote.quote + '</p>' + 
+                    '<p class="source">' + RandomQuote.source + '</p>';
+  }
+  if (RandomQuote.quote && RandomQuote.source && RandomQuote.citation){
+    QuoteString += '<p class="quote">' + RandomQuote.quote + '</p>' + 
+                    '<p class="source">' + RandomQuote.source + 
+                      '<span class="citation"> ' + RandomQuote.citation + '</span>' 
+                  + '</p>';
+  }
+  if (RandomQuote.quote && RandomQuote.source && RandomQuote.citation && RandomQuote.year){
+    QuoteString += '<p class="quote">' + RandomQuote.quote + '</p>' + 
+                    '<p class="source">' + RandomQuote.source + 
+                      '<span class="citation"> ' + RandomQuote.citation + '</span>' +
+                      '<span class="year">' + RandomQuote.year + '</span>'
+                  + '</p>';
+  }
+  return QuoteString;
+}
 
+console.log(printQuote());
+let printedQuoteString = printQuote();
+
+
+//Used idea from https://teamtreehouse.com/workspaces/41299681
+document.getElementById('quote-box').innerHTML = printedQuoteString;
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
